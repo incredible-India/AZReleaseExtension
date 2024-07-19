@@ -1,0 +1,10 @@
+{
+    "manifest_version" : 2,
+    "name":"AZRelease",
+    "version":"1.0.0.",
+    "description":"AZRelease copied the build numbers of existing release and paste in new release in Microsoft Azure Devops, this saves a time 95% of creating manually releasing.",
+    "icons":{
+        "16": "icons8-azure-16"
+    }
+
+}

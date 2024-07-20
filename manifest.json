@@ -1,20 +1,33 @@
 {
-    "manifest_version" : 3,
-    "name":"AZRelease",
-    "version":"1.0.0",
-    "description":"AZRelease copied the build numbers of existing release and paste in new release in Microsoft Azure Devops, this saves a time 95% of creating manually releasing.",
-    "icons":{
-        "16": "icons8-azure-16.png"
-    },
+"manifest_version":3,
+"name":"AZRelease",
+"version":"1.0.0",
+"description":"AZRelease extesnion provide facilities to copy the existing release (all builds) and paste it same builds for the new release. Applicable only for Azure Deops (HKS)",
 
-    "permissions":[
-        "storage","notifications"
-    ],
-    "action":{
-        "default_title":"click here for new release",
-        "default_popup":"copy.html"
-    }
-,
-    "options_page" :"Author.html"
+"permissions":["storage",
+                "notifications",
+                "tabs",
+                "activeTab",
+                "contextMenus"
+            ],
+"icons":{
+    "16":"./icons/16.png"
+},
+"action":{
+    "default_popup":"./html/popup.html",
+    "default_icon":"./icons/16.png",
+    "default_title":"AZ-Release"
+},
+
+"background":{
+     "service_worker": "./js/ReleaseEvent.js"
+},
+"content_scripts":[
+{
+    "matches":["https://dev.azure.com/incadeadev/*"],
+    "js":["./js/content.js"]
+   
+}
+]
 
 }

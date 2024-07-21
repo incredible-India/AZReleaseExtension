@@ -27,7 +27,14 @@
     "matches":["https://dev.azure.com/incadeadev/*"],
     "js":["./js/content.js"]
    
+},
+{
+    "matches":["https://dev.azure.com/incadeadev/ProductDev/_release*"],
+    "js":["./js/contentPaste.js"]
+   
 }
-]
+],
+
+"options_page" :"./html/option.html"
 
 }
